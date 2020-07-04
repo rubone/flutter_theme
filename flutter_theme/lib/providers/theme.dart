@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttertheme/models/theme_preferences.dart';
 
 class ThemeProvider with ChangeNotifier{
@@ -12,5 +12,7 @@ class ThemeProvider with ChangeNotifier{
     themePreferences.setModeTheme(theme);
     notifyListeners();
   }
+
+  bool isDarkTheme () => _theme == ThemePreferences.DARK;
 
 }
